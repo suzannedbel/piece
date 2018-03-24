@@ -8,10 +8,16 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.view.Window;
 
-public class MainActivity extends FragmentActivity {
+import piece.junction.piece.dummy.DummyContent;
+
+public class MainActivity extends FragmentActivity implements ChatFragment.OnListFragmentInteractionListener {
 
     private static String FRAGMENT_TAG = "fragment_tag";
     Fragment fragment;
+
+    @Override
+    public void onListFragmentInteraction(DummyContent.DummyItem item) {
+    }
 
     public enum State
     {
