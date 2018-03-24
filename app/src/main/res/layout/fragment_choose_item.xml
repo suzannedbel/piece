@@ -6,14 +6,54 @@
 
     <HorizontalScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="fill_parent">
 
         <LinearLayout
             android:id="@+id/choose_item_scrollview"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:gravity="center"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
             android:orientation="horizontal">
+
+            <ImageView
+                android:id= "@+id/chooseItem1"
+                android:src="@mipmap/chooseitem1"
+                android:scaleType="fitCenter"
+                android:adjustViewBounds="true"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+
+            <ImageView
+                android:id= "@+id/chooseItem2"
+                android:src="@mipmap/chooseitem2"
+                android:scaleType="fitCenter"
+                android:adjustViewBounds="true"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+
+            <ImageView
+                android:id= "@+id/chooseItem3"
+                android:src="@mipmap/chooseitem3"
+                android:scaleType="fitCenter"
+                android:adjustViewBounds="true"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+
+            <ImageView
+                android:id= "@+id/chooseItem4"
+                android:src="@mipmap/chooseitem4"
+                android:scaleType="fitCenter"
+                android:adjustViewBounds="true"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+
+            <ImageView
+                android:id= "@+id/chooseItem5"
+                android:src="@mipmap/chooseitem5"
+                android:scaleType="fitCenter"
+                android:adjustViewBounds="true"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+
         </LinearLayout>
     </HorizontalScrollView>
 
