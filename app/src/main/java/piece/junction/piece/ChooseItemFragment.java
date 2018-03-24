@@ -5,9 +5,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageButton;
 import android.widget.ImageView;
-import android.widget.Toast;
 
 /**
  * Created by Suzie on 24.03.18.
@@ -26,6 +24,10 @@ public class ChooseItemFragment extends Fragment {
 
         ImageView chatButton = (ImageView) rootView.findViewById(R.id.chat_icon);
         chatButton.setOnClickListener(chatButtonClick);
+
+        ImageView profileButton = (ImageView) rootView.findViewById(R.id.profile_icon);
+        profileButton.setOnClickListener(profileButtonClick);
+
         return rootView;
     }
 
@@ -39,7 +41,14 @@ public class ChooseItemFragment extends Fragment {
     View.OnClickListener chatButtonClick = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
-            ((MainActivity)getActivity()).ReplaceFragment(new ChatFragment(), MainActivity.State.Chat);
+            ((MainActivity)getActivity()).ReplaceFragment(new ChatListFragment(), MainActivity.State.ChatList);
+        }
+    };
+
+    View.OnClickListener profileButtonClick = new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            ((MainActivity)getActivity()).ReplaceFragment(new ProfileFragment(), MainActivity.State.Profile);
         }
     };
 

@@ -7,14 +7,29 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="250dp"
-        android:layout_marginTop="-30dp"
+        android:layout_marginTop="-20dp"
         android:src="@mipmap/higher" />
 
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="250dp"
-        android:layout_marginTop="170dp"
+        android:layout_marginTop="210dp"
         android:src="@mipmap/lower" />
+
+    <ImageView
+        android:id="@+id/member_count_image"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_marginTop="210dp"
+        android:src="@mipmap/bottom2"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/location_button"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_marginTop="190dp"
+        android:src="@mipmap/location" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -32,27 +47,24 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom"
                 android:background="#FFFFFF"
-                android:padding="10dp"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:padding="5dp">
 
                 <View
                     android:layout_width="20dp"
-                    android:layout_height="20dp"/>
+                    android:layout_height="20dp" />
 
-                <ImageView
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
-                    android:padding="15dp"
-                    android:layout_marginTop="-15dp"
-                    android:layout_gravity="center"
-                    android:src="@mipmap/chat"
-                    android:background="#FFFFFF"/>
+                <include layout="@layout/layout_profile_alex" />
 
-                <include layout="@layout/layout_profile_name"/>
-                <include layout="@layout/layout_profile_name"/>
-                <include layout="@layout/layout_profile_name"/>
-                <include layout="@layout/layout_profile_name"/>
-                <include layout="@layout/layout_profile_name"/>
+                <include layout="@layout/layout_profile_rafael" />
+
+                <include layout="@layout/layout_profile_gaya" />
+
+                <include layout="@layout/layout_profile_suzie" />
+
+                <include
+                    android:id="@+id/justus_profile_image"
+                    layout="@layout/layout_profile_justus" />
 
             </LinearLayout>
         </HorizontalScrollView>
@@ -65,51 +77,44 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom"
-                android:orientation="horizontal"
                 android:background="#F78181"
-                android:padding="10dp">
+                android:orientation="horizontal"
+                android:paddingBottom="15dp"
+                android:paddingEnd="10dp"
+                android:paddingStart="10dp"
+                android:paddingTop="15dp">
 
                 <ImageView
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:padding="10dp"
-                    android:src="@mipmap/chat" />
+                    android:id="@+id/want_item_button"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_marginLeft="5dp"
+                    android:src="@mipmap/object1" />
 
                 <ImageView
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:padding="10dp"
-                    android:src="@mipmap/chat" />
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_marginLeft="5dp"
+                    android:src="@mipmap/object2" />
 
                 <ImageView
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:padding="10dp"
-                    android:src="@mipmap/chat" />
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_marginLeft="5dp"
+                    android:src="@mipmap/object3" />
 
                 <ImageView
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:padding="10dp"
-                    android:src="@mipmap/chat" />
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_marginLeft="5dp"
+                    android:src="@mipmap/object4" />
 
                 <ImageView
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:padding="10dp"
-                    android:src="@mipmap/chat" />
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_marginLeft="5dp"
+                    android:src="@mipmap/object5" />
 
-                <ImageView
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:padding="10dp"
-                    android:src="@mipmap/chat" />
-
-                <ImageView
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:padding="10dp"
-                    android:src="@mipmap/chat" />
             </LinearLayout>
         </HorizontalScrollView>
     </LinearLayout>

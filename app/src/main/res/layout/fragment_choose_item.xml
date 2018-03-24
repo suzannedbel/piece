@@ -2,7 +2,8 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="#FFFFFF">
 
     <HorizontalScrollView
         android:layout_width="match_parent"
@@ -23,12 +24,12 @@
                 android:layout_height="match_parent" />
 
             <ImageView
-                android:id= "@+id/chooseItem2"
-                android:src="@mipmap/chooseitem2"
-                android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
+                android:id="@+id/chooseItem2"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent" />
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/chooseitem2" />
 
             <ImageView
                 android:id= "@+id/chooseItem3"
@@ -63,8 +64,8 @@
         android:id= "@+id/addButton"
         android:src="@mipmap/add"
         android:layout_gravity="center"
-        android:layout_marginTop="200dp"
-        android:layout_width="55dp"
-        android:layout_height="55dp" />
+        android:layout_marginTop="230dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp" />
 
 </FrameLayout>
