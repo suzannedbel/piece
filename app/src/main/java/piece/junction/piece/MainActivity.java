@@ -1,27 +1,19 @@
 package piece.junction.piece;
 
 import android.app.ActionBar;
-import android.os.Debug;
 import android.os.Handler;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
-import android.util.Log;
 import android.view.Window;
 
-import piece.junction.piece.dummy.DummyContent;
-
-public class MainActivity extends FragmentActivity implements ChatFragment.OnListFragmentInteractionListener {
+public class MainActivity extends FragmentActivity {
 
     private static String FRAGMENT_TAG = "fragment_tag";
     public static String JOIN_GROUP = "join_group";
     Fragment fragment;
-
-    @Override
-    public void onListFragmentInteraction(DummyContent.DummyItem item) {
-    }
 
     public enum State
     {
