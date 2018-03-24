@@ -9,9 +9,9 @@ import android.view.ViewGroup;
 /**
  * A placeholder fragment containing a simple view.
  */
-public class ChatActivityFragment extends Fragment {
+public class ChatFragment extends Fragment {
 
-    public ChatActivityFragment() {
+    public ChatFragment() {
     }
 
     @Override
