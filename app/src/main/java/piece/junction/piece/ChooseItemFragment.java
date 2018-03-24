@@ -26,14 +26,13 @@ public class ChooseItemFragment extends Fragment {
 
         ImageButton ib = (ImageButton) rootView.findViewById(R.id.third_icon);
         ib.setOnClickListener(chatButtonClick);
-
         return rootView;
     }
 
     View.OnClickListener buttonClick = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
-            ((MainActivity)getActivity()).ReplaceFragment(new MoreInfoFragment());
+            ((MainActivity)getActivity()).ReplaceFragment(new MoreInfoFragment(), MainActivity.State.MoreInfo);
         }
     };
 

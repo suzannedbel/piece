@@ -58,4 +58,13 @@
     </HorizontalScrollView>
 
     <include layout="@layout/title_layout"/>
+
+    <ImageView
+        android:id= "@+id/addButton"
+        android:src="@mipmap/add"
+        android:layout_gravity="center"
+        android:layout_marginTop="200dp"
+        android:layout_width="55dp"
+        android:layout_height="55dp" />
+
 </FrameLayout>

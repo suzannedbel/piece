@@ -13,6 +13,15 @@ public class MainActivity extends FragmentActivity {
     private static String FRAGMENT_TAG = "fragment_tag";
     Fragment fragment;
 
+    public enum State
+    {
+        Splash,
+        ChooseItem,
+        MoreInfo
+    }
+
+    private State currentState;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,6 +33,7 @@ public class MainActivity extends FragmentActivity {
     }
 
     private void AddSplashFragment() {
+        currentState = State.Splash;
         FragmentManager fm = getSupportFragmentManager();
         fragment = fm.findFragmentByTag(FRAGMENT_TAG);
         if (fragment == null) {
@@ -37,17 +47,31 @@ public class MainActivity extends FragmentActivity {
     Runnable removeSplashFragment = new Runnable() {
         @Override
         public void run() {
-            ReplaceFragment(new ChooseItemFragment());
+            ReplaceFragment(new ChooseItemFragment(), State.ChooseItem);
         }
     };
 
-    public void ReplaceFragment(Fragment newFragment) {
+    public void ReplaceFragment(Fragment newFragment, State currentState) {
         FragmentManager fm = getSupportFragmentManager();
         fragment = fm.findFragmentByTag(FRAGMENT_TAG);
         FragmentTransaction ft = fm.beginTransaction();
         fragment = newFragment;
         ft.replace(R.id.frameLayout, fragment, FRAGMENT_TAG);
         ft.commit();
+        this.currentState = currentState;
+    }
+
+
+    @Override
+    public void onBackPressed() {
+
+        if(currentState == State.MoreInfo)
+        {
+            ReplaceFragment(new ChooseItemFragment(), State.ChooseItem);
+        }else{
+            super.onBackPressed();
+        }
+
     }
 
 }
