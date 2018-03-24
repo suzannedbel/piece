@@ -15,9 +15,7 @@
             android:gravity="center"
             android:orientation="horizontal">
         </LinearLayout>
-
     </HorizontalScrollView>
 
     <include layout="@layout/title_layout"/>
-
 </FrameLayout>
