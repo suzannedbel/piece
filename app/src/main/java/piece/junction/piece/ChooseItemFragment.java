@@ -24,7 +24,7 @@ public class ChooseItemFragment extends Fragment {
         ImageView chooseItemOne = (ImageView)rootView.findViewById(R.id.chooseItem1);
         chooseItemOne.setOnClickListener(buttonClick);
 
-        ImageButton chatButton = (ImageButton) rootView.findViewById(R.id.chat_icon);
+        ImageView chatButton = (ImageView) rootView.findViewById(R.id.chat_icon);
         chatButton.setOnClickListener(chatButtonClick);
         return rootView;
     }
