@@ -17,7 +17,8 @@ public class MainActivity extends FragmentActivity {
     {
         Splash,
         ChooseItem,
-        MoreInfo
+        MoreInfo,
+        Chat
     }
 
     private State currentState;
